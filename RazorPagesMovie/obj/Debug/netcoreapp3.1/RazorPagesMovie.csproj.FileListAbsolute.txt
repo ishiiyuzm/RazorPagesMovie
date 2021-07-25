@@ -135,7 +135,6 @@ C:\Source\RazorPagesMovie\RazorPagesMovie\RazorPagesMovie\obj\Debug\netcoreapp3.
 C:\Source\RazorPagesMovie\RazorPagesMovie\RazorPagesMovie\obj\Debug\netcoreapp3.1\RazorPagesMovie.RazorCoreGenerate.cache
 C:\Source\RazorPagesMovie\RazorPagesMovie\RazorPagesMovie\obj\Debug\netcoreapp3.1\Razor\Pages\Error.cshtml.g.cs
 C:\Source\RazorPagesMovie\RazorPagesMovie\RazorPagesMovie\obj\Debug\netcoreapp3.1\Razor\Pages\Index.cshtml.g.cs
-C:\Source\RazorPagesMovie\RazorPagesMovie\RazorPagesMovie\obj\Debug\netcoreapp3.1\Razor\Pages\Privacy.cshtml.g.cs
 C:\Source\RazorPagesMovie\RazorPagesMovie\RazorPagesMovie\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_Layout.cshtml.g.cs
 C:\Source\RazorPagesMovie\RazorPagesMovie\RazorPagesMovie\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Source\RazorPagesMovie\RazorPagesMovie\RazorPagesMovie\obj\Debug\netcoreapp3.1\Razor\Pages\_ViewImports.cshtml.g.cs

@@ -19,7 +19,7 @@ namespace RazorPagesMovie.Models
         [DisplayName("ジャンル")]
         public string Genre { get; set; }
 
-        [DisplayName("値段")]
+        [DisplayName("金額")]
         [Column(TypeName = "decimal(18, 2)")]
         public decimal Price { get; set; }
     }
