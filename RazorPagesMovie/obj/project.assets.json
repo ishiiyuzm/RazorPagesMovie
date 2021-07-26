@@ -2574,6 +2574,18 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "TMDbLib/1.8.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.1/TMDbLib.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/TMDbLib.dll": {}
+        }
       }
     }
   },
@@ -8464,13 +8476,33 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "TMDbLib/1.8.1": {
+      "sha512": "1i5xCcvuIN4GdZq9dYLmWIueFLn4yP3R6IbCynVl8XHVvEMsnTP8LNoa/KfyGPCCCnQZOO9fnnNftLEOV1sbzw==",
+      "type": "package",
+      "path": "tmdblib/1.8.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/TMDbLib.dll",
+        "lib/net45/TMDbLib.xml",
+        "lib/netstandard1.2/TMDbLib.dll",
+        "lib/netstandard1.2/TMDbLib.xml",
+        "lib/netstandard2.0/TMDbLib.dll",
+        "lib/netstandard2.0/TMDbLib.xml",
+        "lib/netstandard2.1/TMDbLib.dll",
+        "lib/netstandard2.1/TMDbLib.xml",
+        "tmdblib.1.8.1.nupkg.sha512",
+        "tmdblib.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.15",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.15",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.5"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.5",
+      "TMDbLib >= 1.8.1"
     ]
   },
   "packageFolders": {
@@ -8525,6 +8557,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[3.1.5, )"
+          },
+          "TMDbLib": {
+            "target": "Package",
+            "version": "[1.8.1, )"
           }
         },
         "imports": [

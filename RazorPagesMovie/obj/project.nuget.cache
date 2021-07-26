@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "FpnDz+HvtvrCja3fLwJabRwwIJ/iU68+GdgZHznS0bSGXWhhONx96ejFGzF3sx3E0dg+Mv/KuPaHlllf2Q4J6Q==",
+  "dgSpecHash": "9kffms5pt6Rt1km96n89KWQnglGJ8WOU+fJsimw6JU5zT6NHJqYOI8XJHQpdW7DZQrZ6Hld9w7RYLJrdY6/mzg==",
   "success": true,
   "projectFilePath": "C:\\Source\\RazorPagesMovie\\RazorPagesMovie\\RazorPagesMovie\\RazorPagesMovie.csproj",
   "expectedPackageFiles": [
@@ -162,7 +162,8 @@
     "C:\\Users\\Ishii\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Ishii\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Ishii\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Ishii\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Users\\Ishii\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\Ishii\\.nuget\\packages\\tmdblib\\1.8.1\\tmdblib.1.8.1.nupkg.sha512"
   ],
   "logs": []
 }
