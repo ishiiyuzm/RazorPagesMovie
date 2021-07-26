@@ -1,10 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TMDbLib.Client;
+using TMDbLib.Objects.Movies;
 
 namespace RazorPagesMovie.Pages
 {
@@ -17,9 +20,18 @@ namespace RazorPagesMovie.Pages
             _logger = logger;
         }
 
-        public void OnGet()
-        {
+        public string Title;
 
+        public Task OnGetAsync()
+        {
+            // TMDbのAPIキー
+            TMDbClient client = new TMDbClient("c807e25e9945dcb331636165896edb32");
+
+            Movie movie = client.GetMovieAsync(47964).Result;
+
+            Title = movie.Title;
+
+            return Task.CompletedTask;
         }
     }
 }

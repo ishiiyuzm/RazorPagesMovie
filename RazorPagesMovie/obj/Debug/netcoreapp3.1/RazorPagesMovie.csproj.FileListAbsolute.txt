@@ -151,3 +151,4 @@ C:\Source\RazorPagesMovie\RazorPagesMovie\RazorPagesMovie\obj\Debug\netcoreapp3.
 C:\Source\RazorPagesMovie\RazorPagesMovie\RazorPagesMovie\obj\Debug\netcoreapp3.1\Razor\Pages\Movies\Details.cshtml.g.cs
 C:\Source\RazorPagesMovie\RazorPagesMovie\RazorPagesMovie\obj\Debug\netcoreapp3.1\Razor\Pages\Movies\Edit.cshtml.g.cs
 C:\Source\RazorPagesMovie\RazorPagesMovie\RazorPagesMovie\obj\Debug\netcoreapp3.1\Razor\Pages\Movies\Index.cshtml.g.cs
+C:\Source\RazorPagesMovie\RazorPagesMovie\RazorPagesMovie\bin\Debug\netcoreapp3.1\TMDbLib.dll
