@@ -6,14 +6,47 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
 <table class="table">
     <thead>
         <tr>
             <th>
-                今週一押しの映画 : @Html.DisplayFor(model => model.Title)
+                <div id="weeklyMovie"></div>
             </th>
         </tr>
     </thead>
 </table>
+<div id="container">
+</div>
+@section scripts{
+    <script>
+        window.onload = function () {
+            fetch('https://api.themoviedb.org/3/movie/now_playing?api_key=26118a7f5eeb2cc4ecdf16b37614b791&language=ja-JP')
+                .then(response => {
+                    //レスポンス結果
+                    console.log("レスポンス結果：" + response.status);
+                    return response.json();
+                })
+                .then(data => {
+                    //取得したJSONデータの処理
+                    console.log(data);
+                    data.results.map(movie => {
+                        console.log(movie);
+                        const container = document.getElementById("container");
+                        var weeklyMovie = movie.title;
+                        document.getElementById('weeklyMovie').innerHTML = "今週の一押し映画：" + weeklyMovie;
+                        const movie_card = `
+                      <div id="card" class="uk-card uk-card-default uk-card-body uk-width-1-2@m">
+                        <img src="https://image.tmdb.org/t/p/w300${movie.poster_path}" alt="">
+                        <p>${movie.overview}</p>
+                      </div>
+                      `;
+                        container.innerHTML = movie_card;
+                    });
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+        };
+    </script>
+}
