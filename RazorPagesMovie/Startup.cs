@@ -10,6 +10,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using RazorPagesMovie.Models;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.CookiePolicy;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace RazorPagesMovie
 {
@@ -22,16 +25,29 @@ namespace RazorPagesMovie
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+        // このメソッドはランタイムによって呼び出されます。このメソッドを使用して、コンテナーにサービスを追加します。
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
 
-            services.AddDbContext<MovieContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("MovieContext")));
+            services.AddDbContext<MovieContext>(options => {
+                options.UseSqlServer(Configuration.GetConnectionString("MovieContext"));
+            });
+
+            // クッキー認証ミドルウェアの設定
+            // Cookieに、セッションハイジャック等を防ぐためにhttpOnly属性（JSから触れなくする）
+            // Secure属性（SSL時のみクッキーを送信）
+            services.Configure<CookiePolicyOptions>(options => {
+                options.Secure = CookieSecurePolicy.Always;
+                options.HttpOnly = HttpOnlyPolicy.Always;
+            });
+
+            services
+                .AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        // このメソッドはランタイムによって呼び出されます。このメソッドを使用して、HTTP要求パイプラインを構成します。
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -41,13 +57,14 @@ namespace RazorPagesMovie
             else
             {
                 app.UseExceptionHandler("/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+                // デフォルトのHSTS値は30日です。本番シナリオではこれを変更することをお勧めします。https：//aka.ms/aspnetcore-hstsを参照してください。
                 app.UseHsts();
             }
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
+            app.UseCookiePolicy();
+            app.UseAuthentication();
             app.UseRouting();
 
             app.UseAuthorization();
